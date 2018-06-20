@@ -8,5 +8,9 @@ matrix:
     - stage: Build and Deploy
       env:
         - APP1="Secrets"
-      script: echo "new app value:" ; chmod 755 script.sh ; bash -x ./script.sh ; echo $APP
+      script: 
+        - echo "new app value:"
+        - chmod 755 script.sh
+        - bash -x ./script.sh
+        - echo $APP
 
