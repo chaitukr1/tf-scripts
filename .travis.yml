@@ -2,13 +2,14 @@ stages:
   - Build and Deploy
 env:
   global:
-    - APP1="Secrets"
+    - if [ "$TRAVIS_BRANCH" = "master" ]; then APP1="master-app"; fi
+    - if [ "$TRAVIS_BRANCH" = "target" ]; then APP1="target-app"; fi
 matrix:
   include:
     - stage: Build and Deploy
       script: 
         - if [ "$TRAVIS_BRANCH" = "master" ]; then echo "master"; fi
-        - if [ "$TRAVIS_BRANCH" = "master" ]; then echo "target"; fi
+        - if [ "$TRAVIS_BRANCH" = "target" ]; then echo "target"; fi
         - echo "new app value:"
         - chmod 755 script.sh
         - bash -x ./script.sh
