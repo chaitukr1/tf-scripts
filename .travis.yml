@@ -8,7 +8,7 @@ matrix:
     - stage: Build and Deploy
       env:
         - APP="Secrets"
-      script: echo "new app value:" ; chmod 755 script.sh ; ./script.sh ; echo $APP
+      script: echo "new app value:" ; chmod 755 script.sh ; bash -x ./script.sh ; echo $APP
     - language: node_js
       script: echo $TRAVIS_PULL_REQUEST_BRANCH
     - sudo: true
