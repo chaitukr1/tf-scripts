@@ -10,4 +10,7 @@ matrix:
         - chmod 755 script.sh
         - bash -x ./script.sh
         - echo "${APP1}"
-
+    - env:
+        - ZONE="europe-west2-a"
+      script:
+        - echo "${APP1} and ${ZONE}"
