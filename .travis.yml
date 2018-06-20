@@ -1,13 +1,10 @@
 stages:
   - Build and Deploy
-  - functional-test
-
-
+env:
+  - APP1="Secrets"
 matrix:
   include:
     - stage: Build and Deploy
-      env:
-        - APP1="Secrets"
       script: 
         - echo "new app value:"
         - chmod 755 script.sh
