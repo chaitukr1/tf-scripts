@@ -12,5 +12,5 @@ matrix:
         - echo "new app value:"
         - chmod 755 script.sh
         - bash -x ./script.sh
-        - echo $APP
+        - echo "${APP}"
 
