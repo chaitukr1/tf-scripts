@@ -1,7 +1,8 @@
 stages:
   - Build and Deploy
 env:
-  - APP1="Secrets"
+  global:
+    - APP1="Secrets"
 matrix:
   include:
     - stage: Build and Deploy
