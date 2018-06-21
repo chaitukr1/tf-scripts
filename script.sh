@@ -1,5 +1,5 @@
 #!/bin/bash
 
 set -e
-APP="Secrets-new-from-script"
-export APP=$APP
+APP_NAME="Secrets-new-from-script"
+export APP=$APP_NAME
