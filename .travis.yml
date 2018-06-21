@@ -13,7 +13,7 @@ matrix:
         - echo "new app value:"
         - chmod 755 script.sh
         - bash -x ./script.sh
-        - echo "${APP1}"
+        - echo "${APP1} and ${APP}"
     - env:
         - ZONE="europe-west2-a"
       script:
