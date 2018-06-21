@@ -11,7 +11,8 @@ matrix:
         - if [ "$TRAVIS_BRANCH" = "master" ]; then echo "master"; fi
         - if [ "$TRAVIS_BRANCH" = "target" ]; then echo "target"; fi
         - echo "new app value:"
-        - chmod 755 script.sh
+        - chmod 775 script.sh
+        - bash -x
         - bash script.sh
         - echo $APP
     - env:
