@@ -12,7 +12,7 @@ matrix:
         - if [ "$TRAVIS_BRANCH" = "target" ]; then echo "target"; fi
         - echo "new app value:"
         - chmod 775 script.sh
-        - sh script.sh
+        - . script.sh
         - echo $APP
     - env:
         - ZONE="europe-west2-a"
